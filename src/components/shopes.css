@@ -1,0 +1,61 @@
+/* General styles */
+body {
+  margin: 0;
+  height:relative;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Navbar styles */
+.Nav-1 {
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  /* margin-bottom: 3rem; */
+  width: 100%;
+  height: 60px;
+  background-color: #f3f5f8; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(34, 29, 29, 0.1);
+}
+
+.Nav-1 .navbar-content {
+  padding: 0 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Cards container */
+.ResponsiveCard {
+  margin-top: 80px; /* Adds space below the fixed navbar */
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  background-color: #6795db;
+}
+
+/* Individual card styles */
+.MuiCard-root {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(19, 18, 18, 0.15);
+}
+.Nav-2{
+  background-color: #f8fafc;
+  /* padding: 3rem; */
+  margin-top: 200rem;
+}
+.Nav-3{
+  margin-left: 10px;
+}

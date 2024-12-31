@@ -1,0 +1,61 @@
+/* Form Control Container */
+.form-control {
+    margin: 5px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 20%;
+    max-width: 70%;
+    max-height: 30%;
+    border-radius: 2rem;
+
+  }
+  
+  /* Select Dropdown */
+  .Form{
+    background-color: #ffffff;
+    border: 1px solid #8f1616;
+    border-radius: 2rem;
+    font-size: 14px;
+    color: #1984c2;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .Form:hover {
+    border-color: #360653;
+    box-shadow: 0 0 5px rgba(96, 27, 136, 0.3);
+  }
+  
+  /* Menu Items */
+  .menu-item {
+    font-size: 14px;
+    color: #333;
+    padding: 8px 16px;
+  }
+  
+  .menu-item:hover {
+    background-color: #f1f1f1;
+    color: #0288d1;
+  }
+  
+  /* Placeholder (em style) */
+  .placeholder {
+    font-style: italic;
+    color: #757575;
+  }
+  
+  .MuiSelect-outlined {
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .MuiMenuItem-root {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .MuiMenuItem-root:hover {
+    background-color: #f0f0f0;
+  }
+  

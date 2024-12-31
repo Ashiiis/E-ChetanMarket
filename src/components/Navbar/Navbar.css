@@ -1,0 +1,18 @@
+
+  .desktop-navbar {
+    display: none;
+  }
+  
+  .mobile-navbar {
+    display: block;
+  }
+  
+  @media (min-width: 769px) {
+    .desktop-navbar {
+      display: block;
+    }
+    .mobile-navbar {
+      display: none;
+    }
+  }
+  
