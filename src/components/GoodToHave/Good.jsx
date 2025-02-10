@@ -1,10 +1,10 @@
 import React from "react";
 import { FormControl, Select, MenuItem } from "@mui/material";
-import "./Good.css"
+import "./Good.css";
+import CartIcon from './CartIcon';
 const ParallelComponents = ({ onFilterChange }) => {
   const [selectedType, setSelectedType] = React.useState("All");
 
-  // Hardcoded shop types for the dropdown
   const shopTypes = [
     "All",
     "Medical",
@@ -20,19 +20,35 @@ const ParallelComponents = ({ onFilterChange }) => {
   const handleTypeChange = (event) => {
     const selected = event.target.value;
     setSelectedType(selected);
-    onFilterChange(selected === "All" ? "" : selected); // Pass empty string for "All"
+    onFilterChange(selected === "All" ? "" : selected);
   };
 
   return (
-    <FormControl variant="outlined" size="small" className="form-control" >
-      <Select value={selectedType} onChange={handleTypeChange} displayEmpty>
-        {shopTypes.map((type, index) => (
-          <MenuItem key={index} value={type}>
-            {type}
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
+    <div className="good-container">
+      <FormControl variant="outlined" size="small" className="form-control">
+        <Select 
+          value={selectedType} 
+          onChange={handleTypeChange} 
+          displayEmpty
+          sx={{
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderRadius: "2rem",
+              color: "black"
+            },
+            "& .MuiSelect-outlined": {
+              borderRadius: "2rem"
+            }
+          }}
+        >
+          {shopTypes.map((type, index) => (
+            <MenuItem key={index} value={type}>
+              {type}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+      <CartIcon onClick={() => console.log('Cart clicked')} />
+    </div>
   );
 };
 

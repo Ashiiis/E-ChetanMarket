@@ -59,3 +59,38 @@ body {
 .Nav-3{
   margin-left: 10px;
 }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* gap: 20px; */
+  padding: 20px;
+  margin-top:60px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.row{
+  margin: 0 -5px;
+
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

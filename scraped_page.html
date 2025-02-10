@@ -1,0 +1,336 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <link rel="icon" href="images/aictetitle.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../images/aictetitle.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+</head>
+
+
+<body class="w3-light-gray" oncontextmenu="return false">
+
+    <div class="w3-top" style="z-index:4">
+        
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <div class="w3-bar 	w3-text-white w3-padding" style="background-color:#f75700" id="menubar">
+        <a href="http://www.aicte-india.org" style="width:3%" class="w3-bar-item  w3-mobile w3-button w3-hide-small w3-hover-white  w3-hover-text-red w3-hide-medium w3-tooltip"><i class="fa fa-home fa-fw"></i><span style="position:fixed;margin-top:15px" class="w3-text w3-tag w3-orange w3-text-white w3-round w3-animate-opacity"><h6>AICTE Website</h6></span></a>
+        <a href="https://facilities.aicte-india.org/dashboard/pages/angulardashboard.php#!/approved" style="width:7%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Dashboard</a>
+        <a href="angulardashboard.php#!/approved" style="width:12%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Universities/Institutes</a>
+        <div class="w3-dropdown-click"> <a href="angulardashboard.php#!/otherapprovals" class="w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium" onmouseover="myFunction()" onmouseout="myFunction1()">Other Approvals</a>
+		
+		<div id="message" class="w3-dropdown-content w3-bar-block w3-card w3-padding">
+		<a  class="w3-bar-item w3-border-bottom w3-text-red">Message&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-border-bottom">Non Resident Indian(s)(NRI)</a>
+        <a href="#" class="w3-bar-item w3-button w3-border-bottom">PIO-FN-CIWG</a>
+        <a href="#" class="w3-bar-item w3-button w3-border-bottom">Twining Programs</a>
+		<a href="#" class="w3-bar-item w3-button w3-border-bottom">Vocational Courses</a>
+		<a href="#" class="w3-bar-item w3-button w3-border-bottom">Dual Degree/Integrated Courses</a>
+		<a href="#" class="w3-bar-item w3-button w3-border-bottom">Open Distance Learning</a>
+		<a href="#" class="w3-bar-item w3-button w3-border-bottom">Online Courses</a>
+		<a href="#" class="w3-bar-item w3-button w3-border-bottom">Regional Language</a>
+		<a href="#" class="w3-bar-item w3-button w3-border-bottom">Grant of Graded Autonomy</a>
+      </div></div>
+	  		<a href="aicte_nba.php" style="width:5%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">NBA</a>
+		<a href="aicte_autonomus.php" style="width:9%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Autonomous</a>
+				<a href="working_professional.php" style="width:12%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Working Professional</a>
+
+        <a href="faculties.php" style="width:8%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Faculties</a>
+       <!-- <a href="angulardashboard.php#!/graphs" style="width:11%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Graphs & Charts</a>-->
+        <a href="angulardashboard.php#!/closedcourse" style="width:10%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Closed Courses</a>
+        <a href="angulardashboard.php#!/closedinstitute" style="width:11%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Closed Institutes</a>
+        <a href="angulardashboard.php#!/unapproved" style="width:9%" class="w3-bar-item w3-mobile w3-button w3-hide-small w3-hover-white w3-hover-text-red w3-hide-medium">Unapproved</a>
+		 
+
+        <a href="angulardashboard.php#!/unapproved" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"> <i class="fa fa-exclamation-triangle"></i><span class="w3-text">&nbsp;Unapproved</span></a>
+        <a href="angulardashboard.php#!/closedinstitute" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"><i class="fa fa-times"></i><span class="w3-text">&nbsp;Closed Institutes</span></a>
+        <a href="angulardashboard.php#!/closedcourse" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"><i class="fa fa-ban"></i><span class="w3-text">&nbsp;Closed Courses</span></a>
+        <!-- <a href="#!" class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red"> <i class="fa fa-bar-chart-o"></i></a>
+   	<a href="#!" class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red"> <i class="fa fa-users"></i></a>
+    <a href="#!" class="w3-bar-item w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"><i class="fa fa-globe"></i><span class="w3-text">&nbsp;NRI/PIO-FN-CIWG/TP</span></a>-->
+        <a href="angulardashboard.php#!/approved" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"><i class="fa fa-university"></i><span class="w3-text">&nbsp;Universities/Institutes</span></a>
+        <a href="dashboardaicte.php" class="w3-bar-item w3-button w3-large w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"> <i class="fa fa-dashboard"></i><span class="w3-text">&nbsp;Dashboard</span></a>
+        <a href="http://www.aicte-india.org" class="w3-bar-item w3-large w3-button w3-hide-large w3-right w3-hover-white w3-hover-text-red w3-tooltip"> <i class="fa fa-home"></i><span class="w3-text">&nbsp;AICTE</span></a>
+        <a class="w3-button w3-large w3-bar-item w3-hover-white w3-hover-text-red  w3-hide-large " onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </div>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-small w3-bar-block w3-border-right w3-animate-left   w3-hide-large " style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large w3-red">Close &times;</button>
+    <a href="http://www.aicte-india.org" class="w3-bar-item w3-button"><i class="fa fa-home fa-fw"></i>AICTE </a>
+    <a href="dashboardaicte.php" class="w3-bar-item w3-button"><i  class="fa fa-dashboard fa-fw" ></i>Dashboard</a>
+    <a href="angulardashboard.php#!/approved" class="w3-bar-item w3-button"><i  class="fa fa-university fa-fw"></i>Universities/Institutes</a>
+    <a href="angulardashboard.php#!/nripiofcinstitutes" class="w3-bar-item w3-button"><i  class="fa fa-globe fa-fw"></i>Other Approvals</a>
+	<a href="aicte_nba.php" class="w3-bar-item w3-button"><i  class="fa fa-bullseye fa-fw"></i>NBA</a>
+    <a href="aicte_autonomus.php" class="w3-bar-item w3-button"><i  class="fa fa-bell-o fa-fw"></i>Autonomous</a>
+    <a href="faculties.php" class="w3-bar-item w3-button"><i  class="fa fa-users fa-fw"></i>Faculties</a>
+	<a href="working_professional.php" class="w3-bar-item w3-button"><i  class="fa fa-bar-chart-o fa-fw"></i>Graphs & Charts</a>
+   <!-- <a href="angulardashboard.php#!/graphs" class="w3-bar-item w3-button"><i  class="fa fa-bar-chart-o fa-fw"></i>Graphs & Charts</a>-->
+    <a href="angulardashboard.php#!/closedcourse" class="w3-bar-item w3-button"><i  class="fa fa-ban fa-fw"></i>Closed Courses</a>
+    <a href="angulardashboard.php#!/closedinstitute" class="w3-bar-item w3-button"><i  class="fa fa-times fa-fw"></i>Closed Institutes</a>
+    <a href="angulardashboard.php#!/unapproved" class="w3-bar-item w3-button"><i  class="fa fa-exclamation-triangle fa-fw"></i>Unapproved</a>
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+	if(1275>$( window ).width()<1440)
+	{
+   $("#menubar").addClass("w3-small");
+	console.log($( window ).width());
+	console.log("hello");
+	}
+	else if (1000 >$( window ).width() <1275 )
+	{
+		
+		$("#menubar").addClass("w3-tiny");
+	console.log($( window ).width());
+	}
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("message");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+function myFunction1() {
+    var x = document.getElementById("message");
+    x.className = x.className.replace(" w3-show", "");
+}
+</script>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-top:50px;">
+
+        <span us-spinner="{radius:30, width:8, length: 16}"></span>
+		
+        <div ng-view></div>
+    </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+     <script type="text/javascript" src="js/spin.min.js"></script>
+    <script type="text/javascript" src="js/angular-spinner.min.js"></script>
+    <script type="text/javascript" src="js/angular-loading-spinner.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   
+<script src="js/jquery.dataTables.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+
+<script>
+    var app = angular.module('myApp', ['ngLoadingSpinner', 'ngRoute']);
+    app.config(function($routeProvider) {
+        $routeProvider
+
+            .when('/otherapprovals', {
+            templateUrl: 'nripiofcinstitutes.php',
+            controller: 'nripiofccontroller'
+        })
+
+        .when('/closedcourse', {
+                templateUrl: 'closedcourse.php',
+                controller: 'closedcourse'
+            })
+            .when('/faculty', {
+                templateUrl: 'faculties.php',
+                controller: ''
+            })
+            .when('/closedinstitute', {
+                templateUrl: 'closedinstitute.php',
+                controller: 'closedinstitute'
+            })
+            .when('/unapproved', {
+                templateUrl: 'unapproved.php',
+                controller: ''
+            })
+            .when('/graphs', {
+                templateUrl: 'graphs.php',
+                controller: ''
+            })
+
+        .when('/approved', {
+                templateUrl: 'approvedinstitutes.php',
+                controller: ''
+            })
+        .when('/pgdm', {
+                templateUrl: '_pgdm.php',
+                controller: ''
+            })
+		.when('/ODLORF', {
+                templateUrl: 'odlofcinstitutes.php',
+                controller: 'odlorfcontroller'
+            })
+			
+			.when('/ONLINEC', {
+                templateUrl: 'oonlinecourse.php',
+                controller: 'onlinecoursecontroller'
+            }) 
+			
+			.when('/REGL', {
+                templateUrl: 'regionallangues.php',
+                controller: 'reglancontroller'
+            })
+            .when('/dashboard', {
+                templateUrl: 'dashboardaicte.php',
+                controller: ''
+            })
+            .otherwise({
+                redirectTo: 'dashboardaicte.php'
+            });
+    });
+
+    app.controller('nripiofccontroller', function($scope, $http) {
+       
+        $http.get("php/nripiofcinstitute.php?q=2021-2022&q1=NRI").then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.buildtable = function() {
+            $scope.names = "";
+            $http.get("php/nripiofcinstitute.php?q=" + $scope.year + "&q1=" + $scope.modelnripiofc).then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+        $scope.academicyear = ["2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017","2017-2018","2018-2019","2019-2020","2020-2021","2021-2022","2022-2023","2023-2024","2024-2025"];
+		//$scope.year = "2017-2018";
+        $scope.selectnripiofc = [{
+            value: "NRI",
+            name: "Non Resident Indian (NRI)"
+        }, {
+            value: "PIO",
+            name: "PIO/FN/CIWG"
+        }, {
+            value: "FC",
+            name: "Twining Program"
+        },
+		{
+			value: "integrated",
+            name: "Dual Degree/Integrated"
+        },
+		{
+            value: "voc",
+            name: "Vocational"
+        },
+
+        {
+            value: "ODL",
+            name: "Open Distance Learning"
+        },
+		
+		{
+            value: "ONLINE",
+            name: "Online Courses"
+        },
+		
+		{
+            value: "LANGUAGE",
+            name: "Regional Languages"
+        },
+		
+		{
+            value: "GGA",
+            name: "Grant of Graded Autonomy"
+        }];
+		
+    });
+	
+	
+	 app.controller('odlorfcontroller', function($scope, $http) {
+       
+        $http.get("php/odlofcinstitute.php?q=2021-2022&q1=ODLORF").then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.buildtable = function() {
+            $scope.names = "";
+            $http.get("php/odlofcinstitute.php?q=2021-2022&q1=ODLORF").then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+        
+    });
+	
+	app.controller('onlinecoursecontroller', function($scope, $http) {
+       
+        $http.get("php/onlinecourse.php?q=2021-2022&q1=ONLINEC").then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.buildtable = function() {
+            $scope.names = "";
+            $http.get("php/onlinecourse.php?q=2021-2022&q1=ONLINEC").then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+        
+    });
+	
+	
+	app.controller('reglancontroller', function($scope, $http) {
+       
+        $http.get("php/regionallangues.php?q=2021-2022&q1=REGL").then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.buildtable = function() {
+            $scope.names = "";
+            $http.get("php/regionallangues.php?q=2021-2022&q1=REGL").then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+        
+    });
+	
+
+    app.controller('closedcourse', function($scope, $http) {
+        $scope.academicyear = ["2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017","2017-2018","2018-2019","2019-2020","2020-2021","2021-2022","2022-2023","2023-2024","2024-2025"];
+         $scope.year = "2024-2025";
+            $http.get("php/closedcourses.php?q=" + $scope.year).then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.myFunction = function() {
+            $scope.names = "";
+            $http.get("php/closedcourses.php?q=" + $scope.year).then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+
+    });
+
+    app.controller('closedinstitute', function($scope, $http) {
+        $scope.academicyear = ["2012-2013", "2013-2014", "2014-2015", "2015-2016", "2016-2017","2017-2018","2018-2019","2019-2020","2020-2021","2021-2022","2022-2023","2023-2024","2024-2025"];
+        $scope.year = "2024-2025";
+       
+            $http.get("php/closedinstitutes.php?q=" + $scope.year).then(function(response) {
+            $scope.names = response.data.records;
+        });
+        $scope.myFunction = function() {
+            $scope.names = "";
+            $http.get("php/closedinstitutes.php?q=" + $scope.year).then(function(response) {
+                $scope.names = response.data.records;
+            });
+        }
+
+    });
+</script>
+</body>
+<div class="w3-margin-right">
+				<div class="container-fluid pull-right" ><font size="1" color="#BF6302">Number of Hits:<b style='color:black'>5857586</b><br>* Based on Self Disclosure.<br></font></div>
+		</div>
+</html>

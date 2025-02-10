@@ -1,0 +1,35 @@
+.app{
+    position: relative;
+    width: 70%;
+    height: 40%;
+}
+.header{
+    color: rgb(70, 54, 222);
+    font-size: 20px;
+    margin-top:-2rem;
+}
+.input-container input{
+    background-color: transparent;
+    border-radius: 4px;
+    color:black;
+}
+.add1 button{
+    background-color: aliceblue;
+    width:50%;
+    height:30%;
+    color:black;
+    align-items: left;
+    margin-top: 10px;    
+}
+.task-list button{
+    background-color: aliceblue;
+    width:50%;
+    height:30%;
+    color:black
+}
+.task-list li{
+    color:black
+}
+.add1 h1{
+    color: black;
+}

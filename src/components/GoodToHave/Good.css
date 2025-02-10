@@ -1,10 +1,11 @@
 /* Form Control Container */
 .form-control {
     margin: 5px;
+    margin-left: 4rem;
     display: flex;
     align-items: left;
     justify-content: left;
-    width: 20%;
+    width: 21%;
     max-width: 70%;
     max-height: 30%;
     border-radius: 2rem;
@@ -13,11 +14,6 @@
   
   /* Select Dropdown */
   .Form{
-    background-color: #ffffff;
-    border: 1px solid #8f1616;
-    border-radius: 2rem;
-    font-size: 14px;
-    color: #1984c2;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -59,3 +55,18 @@
     background-color: #f0f0f0;
   }
   
+/* src/components/GoodToHave/Good.css */
+
+.good-container {
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  margin-left: 10px;
+}
+
+.cart-icon {
+  color: #4CAF50; /* Green color */
+  font-size: 24px;
+}

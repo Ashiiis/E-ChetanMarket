@@ -1,29 +1,22 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  /* padding: 2rem; */
-  text-align: top;
 
-}
 body {
   margin: 0; 
-  padding: 0; 
-  height: 100vh; 
+  padding-left: 0; 
+  /* height: 100vh;  */
+  background-color:#c2c0c9 ;
 }
 
 .splash-screen {
   display: flex;
+  padding: 2rem;
+  margin:14rem;
   align-items: center;
-  justify-content:center;
-  height: 100vh;
-  /* width:90rem; */
-  margin-left: -14rem;
-  margin-right: -14rem;
-  background-color: #5D3FD3; /* Customize background */
+  background-color: #5838d7; 
+  border: #4119e1;
+  border-radius: 4rem;
   color: rgb(221, 213, 213);
   font-size: 2rem;
   font-family: Arial, sans-serif;
-  text-align: center;
   animation: fadeOut 3s ease-in-out forwards; /* Apply fade-out animation */
 }
 
